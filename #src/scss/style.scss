@@ -1,0 +1,235 @@
+@import "null.scss";
+@import "mixins.scss";
+@import "fonts.scss";
+@import "forms.scss";
+@import "grid.scss";
+
+$plumbRegular: "Plumb Regular", sans-serif;
+$plumbMedium: "Plumb Medium", sans-serif;
+
+.header {
+
+	.header__top {
+		background: #dc151d;
+		color: #fff;
+		padding: 7px 0 8px;
+
+		&__contact {
+			display: flex;
+			flex-wrap: wrap;
+			li {
+				display: flex;
+				align-items: center;
+
+				span,
+				a {
+					font-size: 14px;
+					line-height: 26px;
+				}
+
+				picture {
+					padding-right: 6px;
+				}
+
+				&:nth-child(1) {
+					padding-right: 16px;
+				}
+
+				&:nth-child(2) {
+					padding-right: 38px;
+				}
+			}
+		}
+
+		&__language_menu {
+			display: flex;
+			justify-content: flex-end;
+			align-items: center;
+			height: 100%;
+			li {
+				a {
+					text-transform: uppercase;
+					font-size: 14px;
+					line-height: 26px;
+					padding: 0 16px;
+				}
+			}
+		}
+
+		li,
+		a {
+			color: #fff;
+			font-family: $plumbRegular;
+		}
+	}
+
+	.header__bottom {
+
+		&__logo {
+			padding: 28px 0 47px;
+		}
+
+		&__social_menu {
+			padding: 33px 0 54px;
+
+			ul {
+				display: flex;
+				align-content: flex-end;
+				justify-content: flex-end;
+				margin-right: -6px;
+				li {
+					padding: 0 3px;
+					display: inline-block;
+
+					a.icon {
+						width: 28px;
+						height: 28px;
+						padding: 0;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+
+						picture {
+							display: flex;
+						}
+
+						img {
+							width: auto;
+							height: auto;
+
+							align-self: center;
+						}
+
+						&.icon-facebook {
+							background: #3B5998;
+						}
+						&.icon-instagram {
+							background: #d6249f;
+							background: radial-gradient(circle at 36% 109%, #fdf497 0, #fdf497 18%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+						}
+						&.icon-tiktok {
+							background: #000000;
+						}
+						&.icon-youtube {
+							background: #E62117;
+						}
+					}
+				}
+			}
+		}
+
+		.slick_slider {
+			.slider-item {
+				position: relative;
+
+				.item-overlay {
+					position: absolute;
+					top: 0;
+					left: 0;
+					right: 0;
+					bottom: 0;
+					display: flex;
+					align-content: flex-start;
+					flex-wrap: wrap;
+					padding: 130px 81px 0;
+
+					h2,
+					p {
+						display: block;
+						width: 100%;
+						color: #fff;
+					}
+
+					h2 {
+						font-family: $plumbMedium;
+						text-transform: uppercase;
+						font-style: normal;
+						font-weight: bold;
+						font-size: 100px;
+						line-height: 1;
+						margin-bottom: 15px;
+						letter-spacing: 3px;
+					}
+
+					p {
+						font-family: $plumbRegular;
+						font-style: normal;
+						font-weight: normal;
+						font-size: 18px;
+						line-height: 27px;
+						margin-bottom: 46px;
+					}
+
+					.btn {
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						padding: 20px 78px;
+						color: #fff;
+						font-family: 'Roboto', sans-serif;
+						font-weight: bold;
+						font-size: 14px;
+						line-height: 16px;
+						background: #dc151d;
+						&.btn-regular {}
+					}
+				}
+			}
+		}
+	}
+}
+
+main.page {
+	h1 {
+		font-family: $plumbMedium;
+		font-size: 30px;
+		line-height: 35px;
+		color: #000;
+		font-weight: bold;
+		padding: 48px 0;
+	}
+}
+
+@media (max-width: 1200px) {}
+@media (max-width: 991px) {}
+@media (max-width: 767px) {
+	.header .header__bottom .slick_slider .slider-item .item-overlay h2 {
+		font-size: 70px;
+		margin-bottom: 15px;
+	}
+	.header .header__bottom .slick_slider .slider-item .item-overlay p {
+		margin-bottom: 30px;
+	}
+	.header .header__top__contact,
+	.header .header__top__language_menu {
+		justify-content: left;
+	}
+	.header .header__top__language_menu li a {
+		padding-left: 3px;
+	}
+	.header .header__bottom__logo {
+		text-align: center;
+	}
+	.header .header__bottom__social_menu {
+		padding-top: 0;
+	}
+	.header .header__bottom__social_menu ul {
+		justify-content: center;
+		margin: 0;
+	}
+}
+
+@media (max-width: 479px) {
+	.header .header__bottom .slick_slider .slider-item {
+		text-align: center;
+		.item-overlay {
+			padding: 120px 15px 0;
+			h2 {
+				font-size: 50px;
+			}
+			.btn {
+				margin: auto;
+			}
+		}
+	}
+}
